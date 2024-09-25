@@ -1,1 +1,3 @@
-# merna-static-website-on-azure-template
+# dice-static
+# Credits
+Eric Pogue
