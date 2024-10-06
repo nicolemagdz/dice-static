@@ -64,3 +64,20 @@ function trigImmaculateRollEffect() {
         alert("Immaculate Roll!");
     }, 1000);
 }
+
+// Function to check and show test tag in test environment
+function showTestTag() {
+    const showTag = (window.SHOW_TEST_TAG === 'true');
+    
+    if (showTag) {
+        const testTag = document.getElementById("test-tag");
+        if (testTag) {
+            testTag.style.display = "block";
+        }
+    }
+}
+
+// When page loads
+window.onload = showTestTag;
+
+console.log(window.SHOW_TEST_TAG)
