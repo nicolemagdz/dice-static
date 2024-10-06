@@ -67,7 +67,7 @@ function trigImmaculateRollEffect() {
 
 // Function to check and show test tag in test environment
 function showTestTag() {
-    const showTag = (typeof SHOW_TEST_TAG !== 'undefined' && SHOW_TEST_TAG === 'true');
+    const showTag = (process.env.SHOW_TEST_TAG === 'true');
 
     if (showTag) {
         const testTag = document.getElementById("test-tag");
@@ -78,4 +78,4 @@ function showTestTag() {
 }
 
 // When page loads
-window.onload = showTestTag
+window.onload = showTestTag;
